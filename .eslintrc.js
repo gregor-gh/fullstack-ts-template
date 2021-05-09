@@ -10,6 +10,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "prettier",
+    "plugin:node/recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {

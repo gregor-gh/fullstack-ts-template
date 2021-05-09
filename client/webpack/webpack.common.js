@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: path.resolve(__dirname, "..", "./client/index.tsx"),
+  entry: path.resolve(__dirname, "..", "pages", "index.tsx"),
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
@@ -33,12 +33,12 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname, "..", "./build/frontend"),
+    path: path.resolve(__dirname, "..", "..", "./build/frontend"),
     filename: "bundle.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "..", "./client/index.html"),
+      template: path.resolve(__dirname, "..", "pages", "index.html"),
     }),
     new CopyPlugin({
       patterns: [
